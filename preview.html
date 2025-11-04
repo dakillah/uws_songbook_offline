@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukulele Wednesday SG (Test Book)</title> <!-- Changed title slightly -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showSongPreview()">
+    <div class="container">
+        <h1>Ukulele Wednesday SG (Preview)</h1>
+
+        <div class="search-selector-group">
+            <label class="switch">
+                <input id="selectionSwitch" type="checkbox">
+                <span class="slider round"></span>
+           </label>
+           <label id="selectionSwitchLabel" for="switch">Search by Artist instead!</label>
+        </div>
+
+        <div id="songSelect" class="song-selector-group">
+            <div class="song-dropdown-grp" id="songDropdownGroup">
+                <label id="selection-label1" for="songDropdown">Title:</label>
+                <div class="song-dropdown-grp2" id="songDropdownGroup2">
+                    <input type="text" id="primarySelectionDropdown" placeholder="Type in song title..">
+                    <div class="overlay" id="primarySelectionListOverlay">
+                        <ul class="primSelList" id="primarySelectionList" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="artist-dropdown-grp">
+                <label id="selection-label2" for="artistDropdown">Artist:</label>
+                <select id="secondarySelectionDropdown" class="secondary-select-drp">
+                    <option value="">-- Select artist --</option>
+                    <!-- Song options will be populated here by script.js -->
+                </select>
+            </div>
+
+
+            <div class="jam-button-grp">
+                <button type="button">Let's Jam!</button>
+            </div>
+        </div>
+
+        <div id="songDetailsContainer" style="display:none;">
+            <div id="errorMessage"></div>
+            <div id="songDetails">
+                <h3 id="songTitleArtist"></h3>
+
+                <div class="controls-display-row">
+                    <div class="scroll-controls">
+                        <button id="startScrollButton">Start Scroll</button>
+                    </div>
+
+                    <div class="speed-control-wrapper">
+                        <label for="scrollSpeed">Speed:</label>
+                        <input type="range" id="scrollSpeed" min="1" max="5" value="1" step="1">
+                        <span id="scrollSpeedValue">1</span>
+                    </div>
+
+                    <div class="font-size-control-wrapper">
+                        <label>Font Size:</label>
+                        <button id="decreaseFontSize">-</button>
+                        <button id="increaseFontSize">+</button>
+                    </div>
+
+                </div>
+                <div class="chords-section">
+                    <ul id="songChords" class="chords-list"></ul>
+                </div>
+                <pre id="songLyrics"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="script_preview.js" defer></script>
+</body>
+</html>

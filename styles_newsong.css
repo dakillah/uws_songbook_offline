@@ -1,0 +1,35 @@
+.input-box {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.textarea-box {
+    width: 95%;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    resize: vertical; /* Allow vertical resize */
+}
+
+.checkboxes {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+
+.column {
+    display: flex;
+    flex-direction: column;
+    max-height: 300px; /* Adjust the height as needed */
+    overflow-y: auto; /* Add a scrollbar if the content exceeds the height */
+}
+
+.column label {
+    margin-bottom: 5px;
+}
