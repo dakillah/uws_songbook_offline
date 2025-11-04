@@ -22,7 +22,7 @@
             <div class="song-dropdown-grp" id="songDropdownGroup">
                 <label id="selection-label1" for="songDropdown">Title:</label>
                 <div class="song-dropdown-grp2" id="songDropdownGroup2">
-                    <input type="search" id="primarySelectionDropdown" onkeyup="processKeyInput()" placeholder="Type in song title..">
+                    <input type="search" id="primarySelectionDropdown" onkeyup="processKeyInput()" onsearch="processSearchClear()" placeholder="Type in song title..">
                     <div class="overlay" id="primarySelectionListOverlay">
                         <ul class="primSelList" id="primarySelectionList" />
                     </div>

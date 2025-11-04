@@ -243,6 +243,7 @@ function processKeyInput() {
     if(filter.length == 0) {
 
         clearPrimarySelectionList();
+        secondarySelectionDropdown.options.length = 1;
 
     } else {
 
@@ -263,6 +264,17 @@ function processKeyInput() {
     }
 
     console.log("Key Press Detected!");
+}
+
+function processSearchClear() {
+    var filter = primarySelectionDropdown.value.toUpperCase();
+
+    if(filter.length == 0) {
+
+        clearPrimarySelectionList();
+        secondarySelectionDropdown.options.length = 1;
+
+    }
 }
 
 // Song Dropdown Change Listener
