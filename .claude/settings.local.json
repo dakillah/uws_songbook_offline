@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import reportlab; print\\('reportlab', reportlab.Version\\)\")",
+      "Bash(python3 -m venv .venv)",
+      "Bash(.venv/bin/pip install:*)"
+    ]
+  }
+}
